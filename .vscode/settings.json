@@ -1,0 +1,18 @@
+{
+  "cSpell.words": ["bunx", "Elysia", "elysiajs", "tseslint"],
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.formatOnSave": true,
+
+  "eslint.experimental.useFlatConfig": true,
+  "eslint.runtime": "bun",
+  "eslint.execArgv": ["--bun"],
+  "eslint.enable": true,
+  "eslint.format.enable": false,
+  "eslint.run": "onType"
+}

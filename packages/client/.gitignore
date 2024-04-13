@@ -33,8 +33,3 @@ yarn-error.*
 
 # typescript
 *.tsbuildinfo
-
-pacakges/client/.expo
-packages/api/credentials
-
-*.local.*

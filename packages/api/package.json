@@ -1,0 +1,20 @@
+{
+  "name": "api",
+  "version": "1.0.50",
+  "scripts": {
+    "start": "bun run --watch src/index.ts"
+  },
+  "engines": {
+    "npm": "10.5.1",
+    "node": "21.7.3"
+  },
+  "dependencies": {
+    "@elysiajs/swagger": "^1.0.3",
+    "elysia": "latest"
+  },
+  "devDependencies": {
+    "bun-types": "latest",
+    "typescript": "5.4.4"
+  },
+  "module": "src/index.js"
+}
