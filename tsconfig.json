@@ -27,6 +27,13 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true
   },
+  "include": [
+    "./*.ts",
+    "./packages/**/*",
+    "./.prettierrc.mjs",
+    "./.lintstagedrc.mjs",
+    "./eslint.config.js"
+  ],
   "exclude": [
     "node_modules",
     "packages/**/node_modules/",

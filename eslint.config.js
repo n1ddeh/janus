@@ -12,28 +12,45 @@ const config = tseslint.config(
   ...tseslint.configs.recommended,
   prettierConfig,
   {
-    files: ["**/*.{js,jsx,mjs,cjs,ts,tsx}"],
-    plugins: {
-      react,
-      "react-native": reactNative,
-    },
     languageOptions: {
       parserOptions: {
+        tsconfigRootDir: import.meta.dirname,
         ecmaFeatures: {
           jsx: true,
         },
       },
       globals: {
         ...globals.browser,
+        ...globals.node,
       },
     },
+    files: ["*.{js,jsx,mjs,cjs,ts,tsx}", "**/*.{js,jsx,mjs,cjs,ts,tsx}"],
     rules: {
       "@typescript-eslint/ban-types": "error",
       "@typescript-eslint/no-invalid-void-type": "error",
       "no-console": "error",
-      "sort-imports": "error",
+    },
+  },
+  {
+    languageOptions: {
+      parserOptions: {
+        tsconfigRootDir: import.meta.dirname,
+        ecmaFeatures: {
+          jsx: true,
+        },
+      },
+      globals: {
+        ...globals.browser,
+        ...globals.node,
+      },
+    },
+    files: ["**/*.{jsx,tsx}"],
+    plugins: {
+      react,
+      "react-native": reactNative,
+    },
+    rules: {
       "react/react-in-jsx-scope": "off",
-      "react/display-name": "error",
       "react/jsx-key": "error",
       "react/jsx-no-comment-textnodes": "error",
       "react/jsx-no-duplicate-props": "error",
@@ -48,7 +65,6 @@ const config = tseslint.config(
       "react/no-find-dom-node": "error",
       "react/no-is-mounted": "error",
       "react/no-render-return-value": "error",
-      "react/no-string-refs": "error",
       "react/no-unescaped-entities": "error",
       "react/no-unknown-property": "error",
       "react/no-unsafe": "error",
@@ -61,14 +77,9 @@ const config = tseslint.config(
       "react-native/no-raw-text": "error",
       "react-native/no-single-element-style-arrays": "error",
     },
-    settings: {
-      react: {
-        version: "detect",
-      },
-    },
   },
   {
-    ignores: ["packages/client/.expo/"],
+    ignores: ["packages/client/.expo/", "./eslint.config.js"],
   },
 );
 

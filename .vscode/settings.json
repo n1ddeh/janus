@@ -1,5 +1,5 @@
 {
-  "cSpell.words": ["bunx", "Elysia", "elysiajs", "tseslint"],
+  "cSpell.words": ["bunx", "Elysia", "elysiajs", "lintstagedrc", "tseslint"],
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -10,9 +10,13 @@
   "editor.formatOnSave": true,
 
   "eslint.experimental.useFlatConfig": true,
-  "eslint.runtime": "bun",
-  "eslint.execArgv": ["--bun"],
+  "eslint.useFlatConfig": true,
+  // "eslint.runtime": "bun",
+  // "eslint.execArgv": ["--bun"],
+  "eslint.trace.server": "messages",
+  "eslint.workingDirectories": [{ "mode": "auto" }],
+  "eslint.debug": false,
   "eslint.enable": true,
-  "eslint.format.enable": false,
-  "eslint.run": "onType"
+  "eslint.run": "onType",
+  "eslint.nodePath": "/Users/markminkoff/.nvm/versions/node/v21.7.3/lib/node_modules"
 }
